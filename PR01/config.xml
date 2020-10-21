@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><configuration><conexion>
+		<driver>com.mysql.jdbc.Driver</driver>
+		<host>jdbc:mysql://127.0.0.1:3306/clase?useSSL=false</host>
+		<user>root</user>
+		<pass>root</pass>
+	</conexion><queries><query>CREATE TABLE IF NOT EXISTS `usuario` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`login` VARCHAR(50) NOT NULL,
+	`pass` VARCHAR(50) NOT NULL,
+	`edad` INT(10) UNSIGNED NOT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
+</query><query>CREATE TABLE IF NOT EXISTS `persona` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL DEFAULT '' COLLATE 'latin1_spanish_ci',
+	`lastname` VARCHAR(50) NOT NULL DEFAULT '' COLLATE 'latin1_spanish_ci',
+	PRIMARY KEY (`id`)
+)
+COLLATE='latin1_spanish_ci'
+ENGINE=InnoDB
+;</query><query>CREATE TABLE IF NOT EXISTS `producto` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL,
+	`desc` VARCHAR(75) NOT NULL,
+	`precio` INT(10) UNSIGNED NOT NULL,
+	`stock` INT(10) UNSIGNED NOT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;</query></queries></configuration>
